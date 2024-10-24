@@ -1,0 +1,6 @@
+[debug] [zinc] IncrementalCompile -----------
+[debug] IncrementalCompile.incrementalCompile
+[debug] previous = Stamps for: 23 products, 9 sources, 4 libraries
+[debug] current source = Set(${BASE}/src/main/scala/ch/makery/address/view/HowToPlayController.scala, ${BASE}/src/main/scala/ch/makery/address/view/WelcomePageController.scala, ${BASE}/src/main/scala/ch/makery/address/view/DifficultyController.scala, ${BASE}/src/main/scala/ch/makery/address/model/SnakesAndLaddersGameModel.scala, ${BASE}/src/main/scala/ch/makery/address/view/BoardController.scala, ${BASE}/src/main/scala/ch/makery/address/view/CharacterController.scala, ${BASE}/src/main/scala/ch/makery/address/view/RootLayoutController.scala, ${BASE}/src/main/scala/ch/makery/address/MainApp.scala, ${BASE}/src/main/scala/ch/makery/address/model/SnakesAndLaddersGameModelHard.scala)
+[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())
+[debug] No changes

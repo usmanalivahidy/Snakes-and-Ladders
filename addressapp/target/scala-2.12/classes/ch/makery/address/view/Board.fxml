@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.BoardController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="215.0" layoutY="9.0" prefHeight="391.0" prefWidth="600.0" stylesheets="@BoardStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="9.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background" stylesheets="@BoardStyle.css">
+               <children>
+                  <Button layoutX="51.0" layoutY="178.0" mnemonicParsing="false" onAction="#rollDiceAndMovePlayer" stylesheets="@WelcomeStyle.css" text="Roll" AnchorPane.leftAnchor="51.0" AnchorPane.topAnchor="178.0" />
+                  <ImageView fx:id="diceImageView" fitHeight="114.0" fitWidth="141.0" layoutX="34.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="234.0">
+                     <image>
+                        <Image url="@../images/blankdice.png" />
+                     </image></ImageView>
+                  <Text fx:id="positionText" layoutX="48.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current position: " wrappingWidth="92.00000089406967" AnchorPane.leftAnchor="48.0" AnchorPane.topAnchor="106.576171875">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Text>
+                  <TextField fx:id="nameField" layoutX="29.0" layoutY="58.0" prefHeight="25.0" prefWidth="123.0" />
+                  <Label layoutX="19.0" layoutY="14.0" prefHeight="33.0" prefWidth="137.0" text="* Enter name below:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <GridPane layoutX="144.0" layoutY="166.0" prefHeight="398.0" prefWidth="417.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row1" stylesheets="@BoardStyle.css" GridPane.rowIndex="4">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+                              <ImageView fx:id="index_1" fitHeight="45.0" fitWidth="34.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/gold.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row1" stylesheets="@BoardStyle.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+                              <ImageView fx:id="index_2" fitHeight="45.0" fitWidth="34.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/gold.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row1" stylesheets="@BoardStyle.css" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+                              <ImageView fx:id="index_3" fitHeight="45.0" fitWidth="34.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/gold.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row1" stylesheets="@BoardStyle.css" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+                              <ImageView fx:id="index_4" fitHeight="45.0" fitWidth="34.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/gold.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row1" stylesheets="@BoardStyle.css" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+                              <ImageView fx:id="index_5" fitHeight="45.0" fitWidth="34.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/gold.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row2" stylesheets="@BoardStyle.css" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" />
+                              <ImageView fx:id="index_6" fitHeight="45.0" fitWidth="34.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/purple.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row2" stylesheets="@BoardStyle.css" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                              <ImageView fx:id="index_7" fitHeight="45.0" fitWidth="34.0" layoutX="8.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/purple.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row2" stylesheets="@BoardStyle.css" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" />
+                              <ImageView fx:id="index_8" fitHeight="45.0" fitWidth="34.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/purple.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row2" stylesheets="@BoardStyle.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9" />
+                              <ImageView fx:id="index_9" fitHeight="45.0" fitWidth="34.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/purple.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row2" stylesheets="@BoardStyle.css" GridPane.rowIndex="3">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
+                              <ImageView fx:id="index_10" fitHeight="45.0" fitWidth="34.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/purple.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row3" stylesheets="@BoardStyle.css" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" />
+                              <ImageView fx:id="index_11" fitHeight="45.0" fitWidth="34.0" layoutX="9.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/cyan.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row3" stylesheets="@BoardStyle.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                              <ImageView fx:id="index_12" fitHeight="45.0" fitWidth="34.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/cyan.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row3" stylesheets="@BoardStyle.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="13" />
+                              <ImageView fx:id="index_13" fitHeight="45.0" fitWidth="34.0" layoutX="9.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/cyan.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row3" stylesheets="@BoardStyle.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="14" />
+                              <ImageView fx:id="index_14" fitHeight="45.0" fitWidth="34.0" layoutX="9.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/cyan.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row3" stylesheets="@BoardStyle.css" GridPane.rowIndex="2">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15" />
+                              <ImageView fx:id="index_15" fitHeight="45.0" fitWidth="34.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/cyan.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row4" stylesheets="@BoardStyle.css" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16" />
+                              <ImageView fx:id="index_16" fitHeight="45.0" fitWidth="34.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/red.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row4" stylesheets="@BoardStyle.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="17" />
+                              <ImageView fx:id="index_17" fitHeight="45.0" fitWidth="34.0" layoutX="9.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/red.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row4" stylesheets="@BoardStyle.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18" />
+                              <ImageView fx:id="index_18" fitHeight="45.0" fitWidth="34.0" layoutX="9.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/red.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row4" stylesheets="@BoardStyle.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19" />
+                              <ImageView fx:id="index_19" fitHeight="45.0" fitWidth="34.0" layoutX="9.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/red.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row4" stylesheets="@BoardStyle.css" GridPane.rowIndex="1">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20" />
+                              <ImageView fx:id="index_20" fitHeight="45.0" fitWidth="34.0" layoutX="9.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/red.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row5" stylesheets="@BoardStyle.css" GridPane.columnIndex="4">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="21" />
+                              <ImageView fx:id="index_21" fitHeight="45.0" fitWidth="34.0" layoutX="9.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/green.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row5" stylesheets="@BoardStyle.css" GridPane.columnIndex="3">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="22" />
+                              <ImageView fx:id="index_22" fitHeight="45.0" fitWidth="34.0" layoutX="9.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/green.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row5" stylesheets="@BoardStyle.css" GridPane.columnIndex="2">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23" />
+                              <ImageView fx:id="index_23" fitHeight="45.0" fitWidth="34.0" layoutX="9.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/green.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row5" stylesheets="@BoardStyle.css" GridPane.columnIndex="1">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="24" />
+                              <ImageView fx:id="index_24" fitHeight="45.0" fitWidth="34.0" layoutX="9.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/green.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="row5" stylesheets="@BoardStyle.css">
+                           <children>
+                              <Text layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25" />
+                              <ImageView fx:id="index_25" fitHeight="50.0" fitWidth="40.0" layoutX="9.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/green.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+                  <ImageView fitHeight="150.0" fitWidth="60.0" layoutX="85.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+                     <image>
+                        <Image url="@../images/snake.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="160.0" fitWidth="144.0" layoutX="190.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true" rotate="-51.0">
+                     <image>
+                        <Image url="@../images/snake.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="330.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" rotate="-26.6">
+                     <image>
+                        <Image url="@../images/ladder.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="300.0" layoutX="90.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ladder.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

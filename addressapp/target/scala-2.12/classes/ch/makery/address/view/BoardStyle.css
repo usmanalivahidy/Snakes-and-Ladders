@@ -1,0 +1,38 @@
+.row1 {
+-fx-background-color: #ffd700;
+-fx-border-color: #1d1d1d;
+-fx-border-width: 2px;
+}
+.row2 {
+-fx-background-color: #6a5acd;
+-fx-border-color: #1d1d1d;
+-fx-border-width: 2px;
+}
+.row3 {
+-fx-background-color: #00ffff;
+-fx-border-color: #1d1d1d;
+-fx-border-width: 2px;
+}
+.row4 {
+-fx-background-color: #ff0000;
+-fx-border-color: #1d1d1d;
+-fx-border-width: 2px;
+}
+
+.row5 {
+-fx-background-color: #00ff00;
+-fx-border-color: #1d1d1d;
+-fx-border-width: 2px;
+}
+.background {
+-fx-background-image:url("../images/wooden.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent #1d1d1d transparent #1d1d1d;
+    -fx-background-color: transparent, derive(#1d1d1d,20%);
+}
